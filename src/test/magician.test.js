@@ -5,16 +5,16 @@ import { Magician } from "../class/magician";
 test ('Magicianstoned', () => {
     const magician = new Magician('Gendalf','magician')
     const expected = false
-    const rezult = magician.getStoned()
+    const rezult = magician.Stoned
     expect(rezult).toBe(expected)
 })
 
 
 test ('MagicianStonnedTrue', () => {
     const magician = new Magician('Gendalf','magician')
-    magician.setStoned()
+    magician.Stoned = true
     const expected = true
-    const rezult = magician.getStoned()
+    const rezult = magician.Stoned
     expect(rezult).toBe(expected)
 })
 
@@ -22,16 +22,16 @@ test ('MagicianStonnedTrue', () => {
 test ('MagicianAttack', () => {
     const magician = new Magician('Gendalf','magician')
     const expected = 120
-    magician.setAttack(1)
-    const rezult = magician.getAttack()
+    magician.Attack = 1
+    const rezult = magician.Attack
     expect(rezult).toBe(expected)
 })
 
 test('MagicianAttackStoned', () => {
     const magician = new Magician('Gendalf','magician')
-    magician.setStoned()
+    magician.Stoned = true
     const expected = 105
-    magician.setAttack(2)
-    const rezult = magician.getAttack()
+    magician.Attack = 2
+    const rezult = magician.Attack
     expect(rezult).toBe(expected)
 })

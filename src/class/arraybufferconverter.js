@@ -17,8 +17,8 @@ export class ArrayBufferConverter {
        
     }
 
-    load(){
-        return getBuffer()
+    load(value){
+        return value
     }
     toString(buffer){
         return String.fromCharCode(...new Uint16Array(buffer));

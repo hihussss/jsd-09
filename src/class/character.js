@@ -13,33 +13,32 @@ export class Character{
 
         this.pathObject = {
         1: 0,
-        2: 10,
+        2: 10, 
         3: 20,
         4: 30,
         5: 40
     }
 }
-    setAttack(path){
+    set Attack(path){
         this.attack = this.attack-this.pathObject[path]
         this.attacks.set('attack',this.attack) 
-        if (this.getStoned()){
+        if (this.Stoned){
             const value = this.attack - Math.log2(path)*5
             this.attacks.set('attack',value)
         }
-        
-
     }
-
-
-    setStoned(){
-        this.stoneds.set('stoned',true)
-    }
-
-    getAttack(){
+    
+    get Attack(){
         return this.attacks.get('attack')
     }
 
-    getStoned(){
+    set Stoned(value){
+        this.stoneds.set('stoned',value)
+    }
+
+    
+
+    get Stoned(){
         return this.stoneds.get('stoned')
     }
 }
